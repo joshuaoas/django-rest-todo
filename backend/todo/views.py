@@ -5,6 +5,19 @@ from rest_framework.reverse import reverse
 from .models import Todo
 from .serializers import TodoSerializer
 
+"""
+APIView: allow us to define functions that match standard HTTP methods like:
+    Ex: GET, POST, PUT, PATCH, DELETE
+
+Viewsets: allow us to define functions that match to common API object actions like: 
+    Ex: LIST, CREATE, RETRIEVE, UPDATE, etc.
+
+Viewsets are also used to write logic to perform standard database operations and to 
+interface with a database back-end. And are usually used for existing database model to manage predefined objects.
+
+The functions you add to the APIView are different than the functions you add to the ViewSet class.
+"""
+
 
 class TodoList(APIView):
     def get(self, request):
